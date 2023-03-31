@@ -1,0 +1,21 @@
+[features]
+seeds = false
+[programs.localnet]
+slope_minter = "D2bEcGfANjxMf9ZxkVVvbtC6tsoo2YVfnT8nP6TTRBWJ"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/slope-minter.ts"
+
+[[test.genesis]]
+address = "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+program = "metadata.so"
+
+[test]
+startup_wait = 10000

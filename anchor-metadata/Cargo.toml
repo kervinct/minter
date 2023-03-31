@@ -1,0 +1,17 @@
+[package]
+name = "anchor-metadata"
+version = "0.1.0"
+edition = "2021"
+description = "CPI clients for Metaplex token metadata"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = ["metadata"]
+metadata = []
+
+
+[dependencies]
+anchor-lang = { version = "0.25.0", features = ["derive"] }
+borsh = "0.9.3"
+mpl-token-metadata = { version = "1.2.6", features = ["no-entrypoint"] }
+solana-program = "1.9.13"
